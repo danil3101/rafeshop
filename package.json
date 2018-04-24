@@ -1,0 +1,26 @@
+{
+  "name": "rafeshop",
+  "version": "1.0.0",
+  "description": "\"# rafeshop\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danil3101/rafeshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danil3101/rafeshop/issues"
+  },
+  "homepage": "https://github.com/danil3101/rafeshop#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
