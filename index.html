@@ -1,1 +1,172 @@
-51265156165165165196
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Тест по мхк</title>
+</head>
+<body>
+	<section class="test"> 
+		<div class="item active">
+			<h2>Вопрос 1</h2>
+			<div class="block-variant">
+				<span class="variant">Ответ 1</span>
+				<span class="variant right">Ответ2</span>
+				<span class="variant">Ответ 3</span>
+				<span class="variant">Ответ 4</span>
+			</div>
+		</div>
+		<div class="item">
+			<h2>Вопрос 2</h2>
+			<div class="block-variant">
+				<span class="variant right">Ответ 1</span>
+				<span class="variant">Ответ2</span>
+				<span class="variant">Ответ 3</span>
+				<span class="variant">Ответ 4</span>
+			</div>
+		</div>
+		<div class="item">
+			<h2>Вопрос 3</h2>
+			<div class="block-variant">
+				<span class="variant">Ответ 1</span>
+				<span class="variant">Ответ2</span>
+				<span class="variant right">Ответ 3</span>
+				<span class="variant">Ответ 4</span>
+			</div>
+		</div>
+		<div class="item">
+			<h2>Вопрос 4</h2>
+			<div class="block-variant">
+				<span class="variant">Ответ 1</span>
+				<span class="variant">Ответ2</span>
+				<span class="variant">Ответ 3</span>
+				<span class="variant right">Ответ 4</span>
+			</div>
+		</div>
+		<div class="item">
+			<h2>Вопрос 5</h2>
+			<div class="block-variant">
+				<span class="variant">Ответ 1</span>
+				<span class="variant right">Ответ2</span>
+				<span class="variant">Ответ 3</span>
+				<span class="variant">Ответ 4</span>
+			</div>
+		</div>
+		<div class="item">
+			<h1>оценка :<div class="score"></div></h1>
+		</div>
+	</section>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.test {
+			padding-top: 80px; 
+			margin: 0 auto;
+			border: 1px solid grey;
+			width: 1000px;
+			display: flex;
+			height: 500px;
+
+		}
+
+		.item {
+			display: none;
+			width: 100%;
+		}
+
+		.active {
+			display: flex;
+			flex-direction: column;
+		}
+
+		h2 {
+
+			text-align: center;
+		}
+
+		.block-variant {
+			margin: 0 auto;
+			width: 500px;
+			height: 100px;
+			margin-top: 200px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		span {
+			display: inline-block;
+			height: 50px;
+			width: 248px;
+			text-align: center;
+			cursor: pointer;
+		}
+
+
+	</style>
+
+	<script>
+		var right = document.querySelectorAll(".right");
+		var item = document.querySelectorAll(".item");
+		var score = 0;
+		var blocvar = document.querySelectorAll(".block-variant");
+
+		right[0].onclick = function() {
+			score ++;
+		}
+
+		blocvar[0].onclick = function() {
+			document.querySelector(".active").style.display = "none";
+			document.querySelector(".active").classList.remove("active");
+			item[1].classList.add("active");
+		}
+
+		right[1].onclick = function() {
+			score ++;
+		}
+
+		blocvar[1].onclick = function() {
+			document.querySelector(".active").style.display = "none";
+			document.querySelector(".active").classList.remove("active");
+			item[2].classList.add("active");
+		}
+
+		right[2].onclick = function() {
+			score ++;
+		}
+
+		blocvar[2].onclick = function() {
+			document.querySelector(".active").style.display = "none";
+			document.querySelector(".active").classList.remove("active");
+			item[3].classList.add("active");
+		}
+
+		right[3].onclick = function() {
+			score ++;
+		}
+
+		blocvar[3].onclick = function() {
+			document.querySelector(".active").style.display = "none";
+			document.querySelector(".active").classList.remove("active");
+			item[4].classList.add("active");
+		}
+
+		right[4].onclick = function() {
+			score ++;
+		}
+
+		blocvar[4].onclick = function() {
+			document.querySelector(".active").style.display = "none";
+			document.querySelector(".active").classList.remove("active");
+			item[5].classList.add("active");
+			if (score <= 2) {
+				alert("Ваша оценка: 2");
+			} else {
+				alert("Ваша оценка:" + score);
+			}
+		}
+	</script>
+</body>
+</html>
