@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Тест по мхк</title>
+</head>
+<body>
+	<section class="test"> 
+		<div class="item active" style="padding-top: 150px;">
+			<h2>Тест по теме "Эпоха Возрождения"</h2>
+			<button style="margin-top: 50px;" class="start">Начать тест</button>
+		</div>
+		<div class="item">
+			<h2>Каким термином принято называть Эпоху возрождения?</h2>
+			<div class="block-variant">
+				<span class="variant">Барокко</span>
+				<span class="variant right">Ренессанc</span>
+				<span class="variant">Ампир</span>
+				<span class="variant">Классицизм</span>
+			</div>
+		</div>
+		<div class="item">
+			<h2>На сколько этапов делится эпоха возрождения?</h2>
+			<div class="block-variant">
+				<span class="variant right">4</span>
+				<span class="variant">5</span>
+				<span class="variant">2</span>
+				<span class="variant">3</span>
+			</div>
+		</div>
+		<div class="item">
+			<h2>В какой стране возникло Возрождение?</h2>
+			<div class="block-variant">
+				<span class="variant">Германия</span>
+				<span class="variant">Франция</span>
+				<span class="variant right">Италия</span>
+				<span class="variant">Испания</span>
+			</div>
+		</div>
+		<div class="item">
+			<h2>Какой художественный стиль приходит на смену Ренессанса?</h2>
+			<div class="block-variant">
+				<span class="variant">Готика</span>
+				<span class="variant">Рококо</span>
+				<span class="variant">Классицизм</span>
+				<span class="variant right">Маньеризм</span>
+			</div>
+		</div>
+		<div class="item">
+			<h2>Какой из перечисленных мастеров творил в эпоху Высокого Возрождения?</h2>
+			<div class="block-variant">
+				<span class="variant">Джотто</span>
+				<span class="variant right">Рафаэль</span>
+				<span class="variant">Рубенс</span>
+				<span class="variant">Микеланджело</span>
+			</div>
+		</div>
+		<div class="item">
+			<h2 style="margin-top: 140px;">Пройти тест заново?</h1>
+			<button class="start" style="margin-top: 50px;">Заново</button>
+		</div>
+	</section>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			font-family: Arial;
+			color: #404040;
+		}
+
+		body {
+			background-color: #D9D9D9;
+		}
+
+		.test {
+			padding-top: 80px; 
+			margin: 0 auto;
+			width: 99%;
+			display: flex;
+			height: calc(100vh - 100px);
+		}
+
+		.item {
+			display: none;
+			width: 100%;
+		}
+
+		.active {
+			display: flex !important;
+			flex-direction: column;
+		}
+
+		h2 {
+			text-align: center;
+		}
+
+		button {
+			width: 150px;
+			height: 50px;
+			margin: 0 auto;
+			background: #a6a6a6;
+			border: none;
+			cursor: pointer;
+			font-weight: 700;
+		}
+
+		.block-variant {
+			margin: 0 auto;
+			width: 500px;
+			height: 100px;
+			margin-top: 200px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.variant {
+
+		}
+
+		span {
+			display: inline-block;
+			height: 50px;
+			width: 248px;
+			text-align: center;
+			cursor: pointer;
+		}
+	</style>
+	<script>
+		var right = document.querySelectorAll(".right");
+		var item = document.querySelectorAll(".item");
+		var score = 0;
+		var blocvar = document.querySelectorAll(".block-variant");
+		var start = document.querySelectorAll('.start');
+
+		start[0].onclick = function() {
+			document.querySelector(".active").style.display = "none";
+			document.querySelector(".active").classList.remove("active");
+			item[1].classList.add("active");
+			start_test();
+		}
+
+		start[1].onclick = function() {
+			document.querySelector(".active").style.display = "none";
+			document.querySelector(".active").classList.remove("active");
+			item[1].classList.add("active");
+			start_test();
+		}
+
+
+		function start_test() {
+			right[0].onclick = function() {
+				score ++;
+			}
+
+			blocvar[0].onclick = function() {
+				document.querySelector(".active").style.display = "none";
+				document.querySelector(".active").classList.remove("active");
+				item[2].classList.add("active");
+			}
+
+			right[1].onclick = function() {
+				score ++;
+			}
+
+			blocvar[1].onclick = function() {
+				document.querySelector(".active").style.display = "none";
+				document.querySelector(".active").classList.remove("active");
+				item[3].classList.add("active");
+			}
+
+			right[2].onclick = function() {
+				score ++;
+			}
+
+			blocvar[2].onclick = function() {
+				document.querySelector(".active").style.display = "none";
+				document.querySelector(".active").classList.remove("active");
+				item[4].classList.add("active");
+			}
+
+			right[3].onclick = function() {
+				score ++;
+			}
+
+			blocvar[3].onclick = function() {
+				document.querySelector(".active").style.display = "none";
+				document.querySelector(".active").classList.remove("active");
+				item[5].classList.add("active");
+			}
+
+			right[4].onclick = function() {
+				score ++;
+			}
+
+			blocvar[4].onclick = function() {
+				document.querySelector(".active").style.display = "none";
+				document.querySelector(".active").classList.remove("active");
+				item[6].classList.add("active");
+				if (score <= 2) {
+					alert("Ваша оценка: 2");
+				} else {
+					alert("Ваша оценка:" + score);
+				}
+			}
+
+			score = 0;
+		}
+	</script>
+</body>
+</html>
